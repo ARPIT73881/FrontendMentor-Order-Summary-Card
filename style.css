@@ -1,0 +1,205 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* reset default setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* given colors */
+:root {
+  /* Primary Colors */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral Colors */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /* Hover color */
+  --hover-color-blue: hsl(245, 83%, 68%);
+}
+
+/* changing font size  */
+/* 1 rem = 10px; */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--Very-pale-blue);
+  background-image: url(images/pattern-background-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* main container  */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin-inline: 2rem;
+}
+
+.main-container {
+  background-color: var(--Very-pale-blue);
+  max-width: 31.5rem;
+  min-height: 49rem;
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 1rem 0.1rem var(--Pale-blue);
+}
+
+/* hero image  */
+.main-container img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+/* section starts here */
+section {
+  padding: 3.5rem;
+}
+
+/* content division */
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding-inline: 2rem;
+}
+
+.content h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--Dark-blue);
+}
+
+.content p {
+  color: var(--Desaturated-blue);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* plan division */
+.plans {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.inner-plans {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.inner-plans img {
+  width: 3.2rem;
+}
+
+.inner-plans h2 {
+  font-size: 1.2rem;
+  color: var(--Dark-blue);
+}
+
+.inner-plans p {
+  color: var(--Desaturated-blue);
+}
+
+.plans a {
+  color: var(--Bright-blue);
+  font-weight: 900;
+}
+
+/* order division */
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.confirm-btn,
+.cancel-btn {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.confirm-btn {
+  background-color: var(--Bright-blue);
+  color: var(--Pale-blue);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.9rem 1.5rem var(--hover-color-blue);
+}
+
+.cancel-btn {
+  color: var(--Desaturated-blue);
+}
+
+/* hover effects on buttons */
+.plans a:hover {
+  color: var(--hover-color-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: var(--hover-color-blue);
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  color: var(--Dark-blue);
+}
+
+/* responsiveness */
+@media (max-width: 375px) {
+  /* body */
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--Pale-blue);
+  }
+  /* para and heading  */
+  .inner-plans h2 {
+    font-size: 1.3rem;
+  }
+
+  .inner-plans p {
+    font-size: 1.2rem;
+  }
+
+  /* content  */
+  .content {
+    padding-inline: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1.3rem;
+  }
+
+  .inner-plans img {
+    width: 4rem;
+  }
+
+  .plans a {
+    font-size: 1.2rem;
+  }
+
+  /* buttons */
+  .confirm-btn,
+  .cancel-btn {
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+}
